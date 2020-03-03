@@ -1151,6 +1151,11 @@ Vagrant 2.2.6
 
 #### #HW12 Docker 1
 
+Настройка интеграции с TraviCI:
+```
+travis encrypt "devops-team-otus:<token>#<channel>" \       --add notifications.slack.rooms --com
+```
+
 Для установки:
 ```
 sudo yum install -y yum-utils \
@@ -1617,6 +1622,7 @@ docker stop reddit && docker rm reddit
 ```
 docker run --name reddit --rm -it actisha/otus-reddit:1.0 bash -c ls
 ```
+
 
 
 
