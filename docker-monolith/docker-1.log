@@ -1,0 +1,22 @@
+REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+actisha/ubuntu-tmp-file   latest              772b8c8aace9        2 minutes ago       124MB
+nginx                     latest              a1523e859360        5 days ago          127MB
+ubuntu                    16.04               77be327e4b63        10 days ago         124MB
+hello-world               latest              fce289e99eb9        14 months ago       1.84kB
+
+
+Сравнение вывода двух команд:
+>docker inspect <u_container_id>
+>docker inspect <u_image_id>
+Контейнер создан на основе образа. 
+Образ - это набор слоев:
+"RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:9e6f810a2aabaa90d8e79f52847c74617a94e78fe223f4f067d84a6bd63b9393",
+                "sha256:0040d8f00d7e5afc3a96cbc5f10b21d355e5f0efc03f5eb0e523c5c05fb69356",
+                "sha256:aa6685385151f01c1a936ff0b2219539b0f92ebdce8030ff262c88c9ebd294c6",
+                "sha256:4ae3adcb66cbcfca0b15c25b144694f6899737dca6867387dfb789e5ba4f1249",
+                "sha256:5726c5ab1c35338050595f1b9a0a4edb762255114a6a178bbbb06215cbd5bfad"
+Контейнер - readwrite, а образ readonly.
+
